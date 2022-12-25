@@ -10,7 +10,7 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     ProductModule,
     MongooseModule.forRoot(
-      'mongodb+srv://abubakar0707:abubakar@gob.fxocoyg.mongodb.net/nestauth?retryWrites=true&w=majority',
+      process.env.DB_URL,
     ),
     UserModule,
     AuthModule,
